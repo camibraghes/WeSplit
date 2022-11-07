@@ -66,12 +66,12 @@ struct TemperatureConversion: View {
         }
         
         if outputUnits == "Fahrenheit" {
-            return temperatureInCelsius * 9/5 + 32
+            temperatureInCelsius = temperatureInCelsius * 9/5 + 32
         } else if outputUnits == "Kelvin" {
-            return temperatureInCelsius + 273.15
-        } else  {
-            return temperatureInCelsius
+            temperatureInCelsius += 273.15
         }
+        
+        return temperatureInCelsius
     }
 }
 
