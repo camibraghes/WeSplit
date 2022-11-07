@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct TemperatureConversion: View {
-    
     @State var inputTemperature = 0.0
     @State var inputUnits = "Celsius"
     @State var outputUnits = "Celsius"
@@ -9,6 +8,7 @@ struct TemperatureConversion: View {
     @FocusState var inputTemperatureFocused: Bool
     
     let temperatureType = ["Celsius", "Fahrenheit", "Kelvin"]
+    
     var body: some View {
         NavigationView {
             Form {
@@ -26,7 +26,6 @@ struct TemperatureConversion: View {
                     TextField("Temperature in \(inputUnits)º", value: $inputTemperature, format: .number)
                         .keyboardType(.decimalPad)
                         .focused($inputTemperatureFocused)
-                    
                 }
                 
                 Section {
